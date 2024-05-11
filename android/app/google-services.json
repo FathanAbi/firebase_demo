@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "742563651663",
+    "project_id": "fir-demo-be",
+    "storage_bucket": "fir-demo-be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742563651663:android:c22cefe70484276da84a3a",
+        "android_client_info": {
+          "package_name": "com.example.firebase_demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUb8ooJAl3jemij0ehtJNj8ckfKQifEf4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
