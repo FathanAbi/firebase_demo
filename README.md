@@ -1,16 +1,79 @@
-# firebase_demo
+# Firebase-Flutter tutrorial
 
-A new Flutter project.
+## 1. install firebase
+bisa menggunakan npm, yarn, atau exe file
 
-## Getting Started
+contoh menggunaka npm:
+``` shell
+npm install -g firebase-tools
+```
 
-This project is a starting point for a Flutter application.
+![ss terminal](<Screenshot 2024-05-11 105919.png>)
 
-A few resources to get you started if this is your first Flutter project:
+## 2. login firebase
+pastikan telah membuat akun di website firebase login. kemudian jalankan firebase login pada terminal.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+``` shell
+firebase login
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![ss terminal](<Screenshot 2024-05-11 110008.png>)
+
+## 3. tambahkan pub ke environment variable
+![alt text](<Screenshot 2024-05-11 110511.png>)
+
+## 4. Install flutterfire
+```shell
+dart pub global activate flutterfire_cli
+```
+
+![alt text](<Screenshot 2024-05-11 110405.png>)
+
+## 5. buat project baru di flutter
+buat project baru di flutter seperti biasa
+![alt text](<Screenshot 2024-05-11 110955.png>)
+
+## 6. buat project baru di website firebase
+![alt text](<Screenshot 2024-05-11 112638.png>)
+
+## 7. add firebase_core
+```shell
+flutter pub add firebase_core
+```
+![alt text](<Screenshot 2024-05-11 112331.png>)
+
+## 8. konfigurasi flutterfire
+```shell
+flutterfire configure
+```
+![alt text](<Screenshot 2024-05-11 112834.png>)
+
+pilih project yang baru dibuat
+
+## 9. edit main.dart
+![alt text](<Screenshot 2024-05-11 113716.png>)
+
+## 10. pada android/app/build.graddle
+tambahakan
+``` gradle
+android {
+    defaultConfig {
+        ...
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+}
+```
+
+## 11. konfigrasi firestore database
+pada website project firebase pergi ke build lalu ke firestore database. kemudian buat database. pada tab rules ubah read and write ,emjadi true
+
+![alt text](<Screenshot 2024-05-12 125413.png>)
+
+kemudian add cloud_firestore
+```shell
+flutter pub add cloud_firestore
+```
